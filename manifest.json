@@ -1,0 +1,20 @@
+{
+  "name": "Редирект с загрузки на просмотр в браузере.",
+  "description": "t.me/tarodictrl",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": [
+        "*://sdo.tusur.ru/*"
+      ],
+      "js": [
+        "redirect.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "*://sdo.tusur.ru/*"
+  ]
+}
