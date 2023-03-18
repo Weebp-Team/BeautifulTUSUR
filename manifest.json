@@ -8,13 +8,14 @@
       "matches": [
         "*://sdo.tusur.ru/*"
       ],
-      "js": [
-        "redirect.js"
+      "js": [ 
+        "js/redirect.js",
+        "js/filter.js"
       ],
       "run_at": "document_start"
     }
   ],
-  "permissions": [
+  "host_permissions": [
     "*://sdo.tusur.ru/*"
   ]
 }
