@@ -66,11 +66,8 @@ function onLoad() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    console.log(localStorage);
     if (window.location.href == "https://sdo.tusur.ru/") {
-        if (localStorage.getItem("course_filter")==true){
-            onLoad();
-            addEvent();
-        }
+        onLoad();
+        addEvent();
     }
 });
