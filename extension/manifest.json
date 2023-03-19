@@ -3,7 +3,6 @@
   "description": "t.me/tarodictrl",
   "version": "1.0",
   "manifest_version": 3,
-  "options_page": "pages/options.html",
   "content_scripts": [
     {
       "matches": [
@@ -13,17 +12,10 @@
         "js/redirect.js",
         "js/filter.js"
       ],
-      "run_at": "document_start",
-      "web_accessible_resources": [
-        "assets/options.css",
-        "pages/options.html"
-      ]
+      "run_at": "document_start"
     }
   ],
   "host_permissions": [
     "*://sdo.tusur.ru/*"
-  ],
-  "permissions": [
-    "storage"
   ]
 }
