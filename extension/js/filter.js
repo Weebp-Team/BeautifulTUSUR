@@ -13,7 +13,7 @@ function editCourse(event){
                     element.hidden = true;
                 }
             });
-            break;
+            break;  
         case 'Курс 2':
             Array.from(courses_list).forEach(element => {
                 element.hidden = false;
@@ -28,6 +28,11 @@ function editCourse(event){
                 if (!(now.includes(Number(element.getAttribute("data-courseid"))))) {
                     element.hidden = true;
                 }
+            });
+            break;
+        case 'Сбросить':
+            Array.from(courses_list).forEach(element => {
+                element.hidden = false;
             });
             break;
     }
@@ -53,11 +58,19 @@ function onLoad() {
                     '<form class="course_filter_forms">'+
                         '<input type="submit" value="Полезное сейчас" data-toggle="button" class="btn_course">'+
                     '</form>'+
+                    '<form class="course_filter_forms">'+
+                        '<input type="submit" value="Сбросить" data-toggle="button" class="btn_course">'+
+                    '</form>'+
                 '</div>'
     filter.appendChild(div);
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    onLoad();
-    addEvent();
+    console.log(localStorage);
+    if (window.location.href == "https://sdo.tusur.ru/") {
+        if (localStorage.getItem("course_filter")==true){
+            onLoad();
+            addEvent();
+        }
+    }
 });
