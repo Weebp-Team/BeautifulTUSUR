@@ -7,6 +7,7 @@
     {
       "matches": [
         "*://sdo.tusur.ru/*"
+        "*://ocenka.tusur.ru/*"
       ],
       "js": [ 
         "js/redirect.js",
@@ -17,5 +18,6 @@
   ],
   "host_permissions": [
     "*://sdo.tusur.ru/*"
+    "*://ocenka.tusur.ru/*"
   ]
 }
