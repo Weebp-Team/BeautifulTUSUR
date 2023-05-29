@@ -11,7 +11,8 @@
       ],
       "js": [ 
         "js/redirect.js",
-        "js/filter.js"
+        "js/filter.js",
+        "js/pdf.js"
       ],
       "run_at": "document_start"
     }
