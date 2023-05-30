@@ -66,6 +66,6 @@ function onLoad() {
     addEvent();
 }
 
-if (window.location.href == "https://sdo.tusur.ru/") {
+if (window.location.href == "https://sdo.tusur.ru/" || window.location.href == "https://sdo.tusur.ru/#maincontent") {
     document.addEventListener("DOMContentLoaded", onLoad, false);
 }

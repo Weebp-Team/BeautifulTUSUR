@@ -10,17 +10,20 @@ td {
     background-color: #333333 !important;
 }
 
+
 footer {
     outline: solid 2px #fff !important;
 }
 
-header {
-    margin-top: 10px !important;
-    margin-bottom: 10px !important;
+nav {
+    border: 2px solid #D2D2D2 !important;
 }
 
+.navbar {
+    border-bottom: 0px !important;
+}
 
-nav, .coursebox, input {
+.coursebox, input {
     border: 2px solid #D2D2D2 !important;
 }
 
@@ -30,7 +33,6 @@ section {
 }
 
 div
-a,
 p,
 span,
 input,
@@ -42,6 +44,14 @@ h5,
 h6,
 li {
     color: #D2D2D2 !important;
+}
+
+.expandteachers {
+    color: hsl(235, 29%, 70%) !important;
+}
+
+a {
+    color: hsl(235, 29%, 70%) !important;
 }
 
 .card-body {
@@ -73,4 +83,51 @@ nav {
     transition-duration: 0 !important;
     border: 2px solid #D2D2D2 !important;
     border-radius: 10px !important;
+}
+
+input[type="text"]:focus {
+    outline: none !important;
+}
+
+.logo img {
+    filter: hue-rotate(50deg) brightness(90%);
+}
+
+.site-name {
+    color: rgb(156, 160, 201) !important;
+}
+
+.navbar-nav a {
+    color: rgb(156, 160, 201)!important;
+    font-weight: bold;
+}
+
+.usertext {
+    color: rgb(156, 160, 201) !important;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+rect {
+    fill: #494848;
+}
+
+svg g, text {
+    fill: rgb(156, 160, 201) !important;
+}
+
+.author-info {
+    color: #D2D2D2 !important;
+}
+
+table .header, th, td {
+    color: #D2D2D2 !important;
+}
+
+.nav-link.active, .nav-link:hover {
+    color: #333333 !important;
+}
+
+.header-button-title {
+    color: rgb(156, 160, 201) !important;
 }
