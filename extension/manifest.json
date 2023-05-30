@@ -12,7 +12,8 @@
       "js": [ 
         "js/redirect.js",
         "js/filter.js",
-        "js/TableCleaner.js"
+        "js/TableCleaner.js",
+        "js/pdf.js"
       ],
       "run_at": "document_start"
     }

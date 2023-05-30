@@ -65,6 +65,7 @@ function onLoad() {
     filter.appendChild(div);
     addEvent();
 }
+
 if (window.location.href == "https://sdo.tusur.ru/") {
     document.addEventListener("DOMContentLoaded", onLoad, false);
 }
