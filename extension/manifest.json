@@ -13,7 +13,11 @@
         "js/redirect.js",
         "js/filter.js",
         "js/TableCleaner.js",
-        "js/pdf.js"
+        "js/pdf.js",
+        "js/ThemeEditor.js"
+      ],
+      "css": [
+        "styles/theme.css"
       ],
       "run_at": "document_start"
     }
