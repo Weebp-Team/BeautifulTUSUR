@@ -13,11 +13,10 @@
         "js/redirect.js",
         "js/filter.js",
         "js/TableCleaner.js",
-        "js/pdf.js",
-        "js/ThemeEditor.js"
+        "js/pdf.js"
       ],
       "css": [
-        "styles/theme.css"
+        "styles/sdo_theme.css"
       ],
       "run_at": "document_start"
     }

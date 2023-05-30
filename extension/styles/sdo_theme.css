@@ -1,0 +1,76 @@
+body,
+nav,
+div,
+input,
+header,
+footer,
+thead,
+th,
+td {
+    background-color: #333333 !important;
+}
+
+footer {
+    outline: solid 2px #fff !important;
+}
+
+header {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+
+nav, .coursebox, input {
+    border: 2px solid #D2D2D2 !important;
+}
+
+
+section {
+    background-color: #333333 !important;
+}
+
+div
+a,
+p,
+span,
+input,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li {
+    color: #D2D2D2 !important;
+}
+
+.card-body {
+    border: 0 transparent !important;
+    box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.38) !important;
+}
+
+.annotation_container {
+    box-shadow: 0 -2px 0 -1px #D2D2D2 !important;
+}
+
+.annotation_hover,
+.annotation_container:hover,
+.annotation_container.after_h1_hover {
+    border: 1px solid #D2D2D2 !important;
+    transition: 0 !important;
+}
+
+nav {
+    padding-left: 10px !important;
+}
+
+.breadcrumb-nav {
+    padding-left: 0 !important;
+}
+
+.section li.activity:hover {
+    background: none !important;
+    transition-duration: 0 !important;
+    border: 2px solid #D2D2D2 !important;
+    border-radius: 10px !important;
+}
