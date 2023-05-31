@@ -42,7 +42,12 @@ h3,
 h4,
 h5,
 h6,
-li {
+li,
+legend,
+.form-control-static,
+.state,
+.grade
+{
     color: #D2D2D2 !important;
 }
 
@@ -131,3 +136,24 @@ table .header, th, td {
 .header-button-title {
     color: rgb(156, 160, 201) !important;
 }
+
+.filter-group {
+    border: 1px solid #D2D2D2 !important;
+    background-color: transparent !important;
+}
+
+.form-autocomplete-suggestions {
+    background-color: #333333 !important;
+    color: rgb(156, 160, 201) !important;
+}
+
+.badge-secondary {
+    background-color: #333333 !important;
+    color: rgb(156, 160, 201) !important;
+}
+
+.que, 
+.info
+{
+    border: 1px solid #D2D2D2 !important;
+} 
