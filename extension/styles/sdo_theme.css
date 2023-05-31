@@ -121,6 +121,23 @@ svg g, text {
     fill: rgb(156, 160, 201) !important;
 }
 
+.active {
+    color: #494848 !important;
+    font-weight: bold !important;
+}
+
+.light-green,
+.yellow,
+.pink,
+.light-blue,
+.light-orange {
+    color: #494848 !important;
+}
+
+.dark-blue {
+    color: #D2D2D2 !important;
+}
+
 .author-info {
     color: #D2D2D2 !important;
 }
@@ -151,9 +168,3 @@ table .header, th, td {
     background-color: #333333 !important;
     color: rgb(156, 160, 201) !important;
 }
-
-.que, 
-.info
-{
-    border: 1px solid #D2D2D2 !important;
-} 
