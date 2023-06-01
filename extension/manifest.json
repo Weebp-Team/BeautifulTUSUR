@@ -1,8 +1,9 @@
 {
   "name": "Плагин по улучшению сайта sdo.tusur.ru",
   "description": "t.me/tarodictrl",
-  "version": "1.1",
+  "version": "1.2",
   "manifest_version": 3,
+  "options_page": "pages/options.html",
   "content_scripts": [
     {
       "matches": [
@@ -13,10 +14,8 @@
         "js/redirect.js",
         "js/filter.js",
         "js/TableCleaner.js",
-        "js/pdf.js"
-      ],
-      "css": [
-        "styles/sdo_theme.css"
+        "js/pdf.js",
+        "js/theme.js"
       ],
       "run_at": "document_start"
     }
@@ -24,5 +23,8 @@
   "host_permissions": [
     "*://sdo.tusur.ru/*",
     "*://ocenka.tusur.ru/*"
+  ],
+  "permissions": [
+    "storage"
   ]
 }

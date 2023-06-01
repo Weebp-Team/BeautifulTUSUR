@@ -18,12 +18,16 @@ function observeDOM() {
   observer.observe(document.body, { childList: true, subtree: true });
 }
 
-if (window.location.hostname === 'ocenka.tusur.ru') {
-  document.addEventListener('DOMContentLoaded', function () {
-    if (document.querySelector('.ng-scope.do-not-need-to-study')) {
-      removeTableRows();
-    } else {
-      observeDOM();
+chrome.storage.sync.get('electives', function (data) {
+  if (data.electives === true) {
+    if (window.location.hostname === 'ocenka.tusur.ru') {
+      document.addEventListener('DOMContentLoaded', function () {
+        if (document.querySelector('.ng-scope.do-not-need-to-study')) {
+          removeTableRows();
+        } else {
+          observeDOM();
+        }
+      });
     }
-  });
-}
+  }
+})

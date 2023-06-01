@@ -4,4 +4,8 @@ function onLoad() {
         arr[index].href = arr[index].href.replace("?forcedownload=1", "");
     }
 }
-document.addEventListener("DOMContentLoaded", onLoad, false);
+chrome.storage.sync.get('viewer', function (data) {
+    if (data.viewer === true) {
+        document.addEventListener("DOMContentLoaded", onLoad, false);
+    }
+});

@@ -38,6 +38,19 @@ function editCourse(event) {
     }
 }
 
+function observeDOM() {
+    var observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+            if (document.querySelector('course-search-container alone')) {
+                onLoad();
+                observer.disconnect();
+            }
+        });
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+}
+
 function addEvent() {
     var array = document.getElementsByClassName('btn_course');
     Array.from(array).forEach(element => {
@@ -45,27 +58,29 @@ function addEvent() {
     });
 }
 
-function onLoad() {
-    var div = document.createElement("div");
-    var filter = document.getElementsByClassName("course-search-container alone")[0];
-    div.innerHTML = '<div style="margin-top: 10px">' +
-        '<form class="course_filter_forms">' +
-        '<input type="submit" value="Курс 1" data-toggle="button" class="btn_course">' +
-        '</form>' +
-        '<form class="course_filter_forms">' +
-        '<input type="submit" value="Курс 2" data-toggle="button" class="btn_course">' +
-        '</form>' +
-        '<form class="course_filter_forms">' +
-        '<input type="submit" value="Полезное сейчас" data-toggle="button" class="btn_course">' +
-        '</form>' +
-        '<form class="course_filter_forms">' +
-        '<input type="submit" value="Сбросить" data-toggle="button" class="btn_course">' +
-        '</form>' +
-        '</div>'
-    filter.appendChild(div);
-    addEvent();
-}
-
-if (window.location.href == "https://sdo.tusur.ru/" || window.location.href == "https://sdo.tusur.ru/#maincontent") {
-    document.addEventListener("DOMContentLoaded", onLoad, false);
-}
+document.addEventListener('DOMContentLoaded', function () {
+    chrome.storage.sync.get('filter', function (data) {
+        if (data.filter === true) {
+            if (window.location.href == "https://sdo.tusur.ru/" || window.location.href == "https://sdo.tusur.ru/#maincontent") {
+                var div = document.createElement("div");
+                var filter = document.getElementsByClassName("course-search-container alone")[0];
+                div.innerHTML = '<div style="margin-top: 10px">' +
+                    '<form class="course_filter_forms">' +
+                    '<input type="submit" value="Курс 1" data-toggle="button" class="btn_course">' +
+                    '</form>' +
+                    '<form class="course_filter_forms">' +
+                    '<input type="submit" value="Курс 2" data-toggle="button" class="btn_course">' +
+                    '</form>' +
+                    '<form class="course_filter_forms">' +
+                    '<input type="submit" value="Полезное сейчас" data-toggle="button" class="btn_course">' +
+                    '</form>' +
+                    '<form class="course_filter_forms">' +
+                    '<input type="submit" value="Сбросить" data-toggle="button" class="btn_course">' +
+                    '</form>' +
+                    '</div>'
+                filter.appendChild(div);
+                addEvent();
+            }
+        }
+    });
+});
