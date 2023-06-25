@@ -18,7 +18,8 @@
         "js/filter.js",
         "js/TableCleaner.js",
         "js/pdf.js",
-        "js/theme.js"
+        "js/theme.js",
+        "js/buttons.js"
       ],
       "run_at": "document_start"
     }
